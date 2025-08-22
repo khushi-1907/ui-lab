@@ -20,26 +20,35 @@ The components are documented in **Storybook** for interactive exploration.
 ## ⚙️ Setup Instructions
 
 1. Clone the repository:
+```bash
 git clone https://github.com/khushi-1907/ui-lab.git
-cd ui-lab 
+cd ui-lab
+```
+
 Install dependencies:
+```bash
 npm install
-
+```
 Start the development server:
+```bash
 npm run dev
-
+```
 Open browser: http://localhost:5173
 
 Run Storybook locally:
+```bash
 npm run storybook
+```
 Open browser: http://localhost:6006
 
 Run tests:
+```bash
 npm run test
 npm run test:watch  # optional
-
-##🌈 Component Usage
+```
+## Component Usage
 InputField
+```bash
 <InputField
   label="Email"
   placeholder="name@example.com"
@@ -49,8 +58,10 @@ InputField
   value={email}
   onChange={(e) => setEmail(e.target.value)}
 />
+```
 
 DataTable
+```bash
 <DataTable<User>
   data={users}
   columns={columns}
@@ -58,6 +69,7 @@ DataTable
   onRowSelect={setSelectedUsers}
   loading={false}
 />
+```
 
 🌐 Storybook Preview
 Live Storybook: https://ui-lab-pi.vercel.app/
