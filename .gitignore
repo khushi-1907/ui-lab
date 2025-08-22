@@ -40,3 +40,4 @@ coverage/
 
 # Optional: local npm scripts
 .npm/
+.vercel

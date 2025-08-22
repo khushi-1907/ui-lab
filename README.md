@@ -1,49 +1,62 @@
-UI Lab – React Component Assignment
+# UI Lab – React Component Assignment
 
-🎨 React Component Development Assignment
-Focus Area: UI Components
-Tech Stack: React · TypeScript · TailwindCSS (CDN) · Storybook
+🎨 **React Component Development Assignment**  
+Focus Area: **UI Components**  
+Tech Stack: **React · TypeScript · TailwindCSS (CDN) · Storybook**
 
-📦 Project Overview
+---
 
-This project demonstrates two reusable React components built with TypeScript and styled using TailwindCSS via CDN:
+## 📦 Project Overview
 
-InputField – Flexible input with validation states, variants, sizes, and optional features like clear button and password toggle.
+This project demonstrates **two reusable React components** built with TypeScript and styled using TailwindCSS via CDN:
 
-DataTable – Generic table with sorting, row selection, loading & empty states, fully typed with TypeScript generics.
+1. **InputField** – Flexible input with validation states, variants, sizes, and optional features like clear button and password toggle.
+2. **DataTable** – Generic table with sorting, row selection, loading & empty states, fully typed with TypeScript generics.
 
-The components are documented in Storybook for interactive exploration.
+The components are documented in **Storybook** for interactive exploration.
 
-⚙️ Features
-InputField
+---
 
-Text input with label, placeholder, helper text, error message
+## ⚙️ Setup Instructions
 
-States: disabled, invalid, loading
+1. Clone the repository:
 
-Variants: filled, outlined, ghost
+```bash
+git clone https://github.com/khushi-1907/ui-lab.git
+cd ui-lab
+Install dependencies:
 
-Sizes: small, medium, large
+bash
+Copy
+Edit
+npm install
+Start the development server:
 
-Optional: clear button, password toggle
+bash
+Copy
+Edit
+npm run dev
+Open browser: http://localhost:5173
 
-Light & dark theme support via Tailwind
+Run Storybook locally:
 
-DataTable
+bash
+Copy
+Edit
+npm run storybook
+Open browser: http://localhost:6006
 
-Displays tabular data
+Run tests:
 
-Column sorting on sortable columns
-
-Row selection (single/multiple)
-
-Loading state
-
-Empty state
-
-Fully typed with TypeScript generics
-
+bash
+Copy
+Edit
+npm run test
+npm run test:watch  # optional
 🏗 Project Structure
+graphql
+Copy
+Edit
 src/
  ├─ components/
  │   ├─ InputField.tsx
@@ -55,56 +68,15 @@ src/
  │   └─ cn.ts           # Utility for className concatenation
  ├─ App.tsx             # Smoke test/demo for components
  └─ main.tsx
-
-
-Storybook stories are located in src/components alongside components.
-
-App.tsx provides a quick interactive demo for both components.
-
-🚀 Setup Instructions
-
-Clone the repo:
-
-git clone <your-repo-url>
-cd ui-lab
-
-
-Install dependencies:
-
-npm install
-
-
-Start the development server:
-
-npm run dev
-
-
-Open browser: http://localhost:5173
-
-Run Storybook:
-
-npm run storybook
-
-
-Open browser: http://localhost:6006
-
-Interactively test components, variants, states, and sizes.
-
-Run tests:
-
-npm run test
-npm run test:watch  # optional watch mode
-
-🌈 Styling & Theme
-
-TailwindCSS included via CDN (no build step needed)
-
-Light & dark themes supported with dark: variants
-
-Modern, responsive, and accessible UI
-
-💡 Usage Example
+package.json
+tsconfig.json
+vite.config.ts
+README.md
+🌈 Component Usage
 InputField
+tsx
+Copy
+Edit
 <InputField
   label="Email"
   placeholder="name@example.com"
@@ -114,8 +86,10 @@ InputField
   value={email}
   onChange={(e) => setEmail(e.target.value)}
 />
-
 DataTable
+tsx
+Copy
+Edit
 <DataTable<User>
   data={users}
   columns={columns}
@@ -123,35 +97,31 @@ DataTable
   onRowSelect={setSelectedUsers}
   loading={false}
 />
+🌐 Storybook Preview
+Live Storybook: Storybook Preview Link
+(Replace with your Chromatic or Vercel deployment URL)
 
-📘 Storybook Deployment
-
-Option 1: Chromatic
-
-npx chromatic --project-token=<YOUR_PROJECT_TOKEN>
-
-
-Option 2: Vercel
-
-npm run build-storybook
+🎬 Screenshots / GIFs
+InputField variants & states:
 
 
-Deploy the storybook-static folder as a static site.
+DataTable interactions:
+
+
+(Replace with your own GIFs or screenshots stored in screenshots/ folder)
 
 📝 Approach
-
 Components are generic and reusable.
 
 Used TypeScript generics and proper typings for safety.
 
 Tailwind utility classes for rapid styling, responsive design, and dark mode support.
 
-Storybook used to document all component variants and states.
+Storybook documents all component variants and states.
 
-Vitest + Testing Library for basic unit and interaction tests.
+Vitest + Testing Library for unit and interaction tests.
 
 ✅ Assignment Completion Checklist
-
  InputField component with all variants, states, and features
 
  DataTable component with sorting, selection, loading & empty states
@@ -167,3 +137,5 @@ Vitest + Testing Library for basic unit and interaction tests.
  Smoke test App.tsx for live preview
 
  Basic unit tests
+
+ Screenshots/GIFs for interactive demonstration
