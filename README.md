@@ -20,39 +20,25 @@ The components are documented in **Storybook** for interactive exploration.
 ## ⚙️ Setup Instructions
 
 1. Clone the repository:
-
-```bash
 git clone https://github.com/khushi-1907/ui-lab.git
 cd ui-lab
+
 Install dependencies:
-
-bash
-Copy
-Edit
 npm install
-Start the development server:
 
-bash
-Copy
-Edit
+Start the development server:
 npm run dev
+
 Open browser: http://localhost:5173
 
 Run Storybook locally:
-
-bash
-Copy
-Edit
 npm run storybook
 Open browser: http://localhost:6006
 
 Run tests:
-
-bash
-Copy
-Edit
 npm run test
 npm run test:watch  # optional
+
 🏗 Project Structure
 graphql
 Copy
