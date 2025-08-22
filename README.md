@@ -21,8 +21,7 @@ The components are documented in **Storybook** for interactive exploration.
 
 1. Clone the repository:
 git clone https://github.com/khushi-1907/ui-lab.git
-cd ui-lab
-
+cd ui-lab 
 Install dependencies:
 npm install
 
@@ -39,10 +38,56 @@ Run tests:
 npm run test
 npm run test:watch  # optional
 
+##🌈 Component Usage
+InputField
+<InputField
+  label="Email"
+  placeholder="name@example.com"
+  helperText="We’ll never share your email."
+  variant="outlined"
+  size="md"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
+
+DataTable
+<DataTable<User>
+  data={users}
+  columns={columns}
+  selectable
+  onRowSelect={setSelectedUsers}
+  loading={false}
+/>
+
+🌐 Storybook Preview
+Live Storybook: https://ui-lab-pi.vercel.app/
+
+🎬 Screenshots
+InputField variants & states:
+<img width="1153" height="495" alt="image" src="https://github.com/user-attachments/assets/2d42c82e-4eba-4333-8e4b-7de81819ab52" />
+
+DataTable interactions:
+<img width="1077" height="754" alt="image" src="https://github.com/user-attachments/assets/20b1f8fe-b29b-45a4-8194-295b22c637a4" />
+
+📝 Approach
+Components are generic and reusable.
+Used TypeScript generics and proper typings for safety.
+Tailwind utility classes for rapid styling, responsive design, and dark mode support.
+Storybook documents all component variants and states.
+Vitest + Testing Library for unit and interaction tests.
+
+✅ Assignment Completion Checklist
+ InputField component with all variants, states, and features
+ DataTable component with sorting, selection, loading & empty states
+ TypeScript typing for all components
+ Responsive design
+ Light & dark theme support
+ Storybook documentation and interactive demo
+ Smoke test App.tsx for live preview
+ Basic unit tests
+
 🏗 Project Structure
 ```graphql
-Copy
-Edit
 src/
  ├─ components/
  │   ├─ InputField.tsx
@@ -58,70 +103,3 @@ package.json
 tsconfig.json
 vite.config.ts
 README.md
-🌈 Component Usage
-InputField
-tsx
-Copy
-Edit
-<InputField
-  label="Email"
-  placeholder="name@example.com"
-  helperText="We’ll never share your email."
-  variant="outlined"
-  size="md"
-  value={email}
-  onChange={(e) => setEmail(e.target.value)}
-/>
-DataTable
-tsx
-Copy
-Edit
-<DataTable<User>
-  data={users}
-  columns={columns}
-  selectable
-  onRowSelect={setSelectedUsers}
-  loading={false}
-/>
-🌐 Storybook Preview
-Live Storybook: Storybook Preview Link
-(Replace with your Chromatic or Vercel deployment URL)
-
-🎬 Screenshots / GIFs
-InputField variants & states:
-
-
-DataTable interactions:
-
-
-(Replace with your own GIFs or screenshots stored in screenshots/ folder)
-
-📝 Approach
-Components are generic and reusable.
-
-Used TypeScript generics and proper typings for safety.
-
-Tailwind utility classes for rapid styling, responsive design, and dark mode support.
-
-Storybook documents all component variants and states.
-
-Vitest + Testing Library for unit and interaction tests.
-
-✅ Assignment Completion Checklist
- InputField component with all variants, states, and features
-
- DataTable component with sorting, selection, loading & empty states
-
- TypeScript typing for all components
-
- Responsive design
-
- Light & dark theme support
-
- Storybook documentation and interactive demo
-
- Smoke test App.tsx for live preview
-
- Basic unit tests
-
- Screenshots/GIFs for interactive demonstration
