@@ -40,7 +40,7 @@ npm run test
 npm run test:watch  # optional
 
 🏗 Project Structure
-graphql
+```graphql
 Copy
 Edit
 src/
